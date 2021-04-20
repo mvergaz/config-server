@@ -1,0 +1,26 @@
+{
+  "name": "config-server",
+  "version": "0.0.1",
+  "description": "Domain configuration microservice",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/**/*.test.js --watch",
+    "posttest": "tap --coverage-report=lcov",
+    "start": "fastify start -l info app.js",
+    "dev": "fastify start -w -l info -P app.js",
+    "no-w": "fastify start -l info -P app.js"
+  },
+  "author": "Manuel Vergaz Aguilera",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^3.14.2",
+    "fastify-autoload": "^3.7.0",
+    "fastify-cli": "^2.9.1",
+    "fastify-plugin": "^3.0.0",
+    "fastify-sensible": "^3.1.1"
+  },
+  "devDependencies": {
+    "pino-pretty": "^4.7.1",
+    "tap": "^15.0.2"
+  }
+}
